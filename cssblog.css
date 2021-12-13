@@ -1,0 +1,220 @@
+html{
+    font-family: 'Montserrat', sans-serif; /*importado de google fonts */
+}
+body{
+    margin: 0;
+    background-color: #efefef
+}
+header{
+    background-color: rgb(19, 186, 228);
+    color: white;
+    padding: 3rem 2rem;
+}
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+header h4{
+    text-align: center;
+    font-weight: lighter;
+    margin-top: -2rem;
+}
+
+.container_products {
+    width: 400px;
+    margin: 0 auto;   
+}
+
+section article {
+    transition: all 0.3s ease;
+    background-color: #ffff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+section article:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 30);
+}
+
+section article h2, section article p{
+    margin: 1rem;
+    text-align: justify;
+}
+
+.precio_num{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 68%; 
+}
+.precio_texto{
+    font-weight: 800;
+    margin: 80%;
+}
+
+#formulario_main{
+    margin-top: 3rem;
+    width: 100%;
+    height: 900px;
+    background-color: rgb(19, 186, 228);;
+    text-align: center;
+}
+#title {
+    color: white;
+    margin-top: 2rem;
+}
+#formulario_contenido{
+    width: 700px;
+    height: 670px;
+    background-color: white;
+    margin: auto;
+    border-radius: 1%;
+}
+.survey-form{
+    display: inline-block;
+    text-align: center;
+}
+.formulario_titulo{
+    padding-top: 40px;
+    color: white;
+}
+.formulario_titulo2{
+    padding: 15px 0px 15px;
+    background-color: seagreen;
+    border-top-left-radius:3px ;
+    border-top-right-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.campo_texto{
+    font-weight: bold ;
+}
+.formulario_edad_label{
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(185, 185, 185);
+}
+
+.boton{
+    max-width: 150px;
+    color: white;
+    font-weight: 600;
+    width: 200px;
+    height: 30px;
+    margin: 8px 4px;
+    border: 0;
+    background-color: #ECAD4A;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+.boton:hover, .boton_factura:hover, .boton_compra:hover {
+    background-color: #3e8e41
+}
+
+.boton:active, .boton_factura:active, .boton_compra:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+#factura_main{
+    margin-top: 3rem;
+    width: 100%;
+    height: 900px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+#factura_contenido{
+    width: 700px;
+    height: 790px;
+    background-color: white;
+    margin: auto;
+    border-radius: 1%;
+}
+
+.factura_titulo{
+    padding-top: 40px;
+    color: black;
+}
+
+.campo_cantidad{
+    text-align: center;
+    width: 40px;
+    margin-left: 10px;
+}
+.boton_factura{
+    max-width: 150px;
+    color: white;
+    font-weight: 600;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    border: 0;
+    transition: all 0.9s ease;
+    background-color: #ECAD4A;
+    cursor: pointer;
+}
+.boton_compra{
+    max-width: 150px;
+    color: white;
+    font-weight: 600;
+    width: 200px;
+    height: 30px;
+    margin-right: 130px;
+    margin-top: -20px;
+    transition: all 0.9s ease;
+    border: 0;
+    background-color: #ECAD4A;
+    cursor: pointer;
+}
+
+
+#nombre_completo{
+    font-weight: bold;
+}
+
+.factura_resumen{
+    text-align: right;
+    margin-right: 1rem;
+
+}
+.resumen_productos{
+    line-height: 3rem;
+}
+.resumen_precio{
+    margin-right:10rem;
+}
+.numero{
+    font-weight: bold;
+}
+#jubilado{
+    color: red;
+}
+
+
+footer{
+    background-color: #222;
+    margin-top: 870px;
+    padding: 3rem;
+    color: white;
+}
+footer section{
+    float: right;
+}
+footer p{
+    margin: 0;
+}
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+
+}
+footer a:hover{
+    color: cornflowerblue;
+}
+

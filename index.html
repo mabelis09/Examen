@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Venta de Medicamentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssblog.css"/>
+</head>
+
+<body>
+    
+    <script type="text/javascript" src="calculos.js"></script>
+
+    <header id="titulo">
+        <h1>Compra de Medicinas y Suplementos</h1>
+        <h4> Para realizar un pedido, dirígete a la Factura de Compra</h4>
+    </header>
+
+    <section class="container_products">
+        <article class="product">
+            <h2>Jarabe Vicks 44</h2>
+            <p>
+                Alivio de la tos con flemas. Sensación refrescante 
+                en la garganta. Además el jarabe cuenta con una tecnología 
+                que permite que se adhiera a la garganta cuando es tragado, 
+                dejando una capa protectora.
+
+            </p>
+            <img src="imagenes/vick.jpg" width="400"/>
+            <span class="precio_texto">Precio:</span>
+            <span class="precio_num">B/16.34</span>
+        </article>
+
+        <article class="product">
+            <h2>Aleve Liquid-Gels</h2>
+            <p class="descripcion">
+                Analgésico ideal para los fuertes dolores de cuerpo, 
+                articulaciones y espalda, gracias a su acción prolongada 
+                y poder anti-inflamatorio, brindando alivio hasta por 12 horas.
+            </p>
+            <img src="imagenes/aleve.webp" width="400" height="400"/>
+            <span class="precio_texto">Precio:</span>
+            <span class="precio_num">B/12.78</span>
+        </article>
+
+        <article id="product">
+            <h2>TYLENOL Extra Strength</h2>
+            <p>
+                Ayuda a bajar temporalmente la fiebre en adultos y niños mayores de
+                12, y brinda un poderoso alivio de los dolores de cabeza por tensión
+            </p>
+            <img src="imagenes/tylenol.jpg" width="400" height="400"/>
+            <span class="precio_texto">Precio:</span>
+            <span class="precio_num">B/10.47</span>
+        </article>
+    </section>
+
+    <section>
+
+        <div id="formulario_main">
+            <h1 class="formulario_titulo">INFORMACIÓN DEL COMPRADOR</h1>
+            <h1> Compra de Medicinas </h1>
+        <div id="formulario_contenido">    
+            
+            <p class="formulario_titulo2">Tu Información Personal</p>
+            <form class="survey-form">
+                <label class="campo_texto">Nombre: </label>
+                <input type="name" id="nombre_user" class="campo" placeholder="Inserta tu nombre aquí" required><br><br>
+
+                <label class="campo_texto" >Apellido: </label>
+                <input type="name" id="apellido_user" class="campo" placeholder="Inserta tu apellido aquí" required> <br><br>
+                
+                <label class="campo_texto">Email: </label>
+                <input type="email" class="campo" placeholder="Inserta tu email aquí" required> <br><br>
+                
+                <label class="campo_texto">Sexo: </label>
+                <select id="sexo">
+                    <option value="selecciona"> Selección</option> 
+                    <option value="M"> Masculino</option>
+                    <option value="F"> Femenino</option>  
+                </select> <br><br>
+                
+                <label class="campo_texto">Edad: </label>
+                <input type="number" id="edad" min="18" max="80" class="campo" placeholder="Edad">
+                <br><label class="formulario_edad_label"> *Solo adultos pueden comprar</label><br><br>
+
+                <label class="campo_texto">¿Desea Delivery?: </label>
+                <input type="checkbox"> <br><br>
+            </form>   
+            
+            <p class="formulario_titulo2">Tus Datos de Envío</p>
+            <form class="survey-form">
+                <label class="campo_texto">Ubicación </label>
+                <select id="dropdown">
+                    <option value="selecciona"> Seleccion...</option> 
+                    <option value="hola"> Panamá Ciudad</option>
+                    <option value="Panamá Oeste"> Panamá Oeste</option>
+                    <option value="Panamá Este"> Panamá Este</option>
+                    <option value="Panamá Norte"> Panamá Norte</option>   
+                </select> <br><br>
+
+                <label class="campo_texto">Dirección: </label>
+                <input type="name" class="campo" placeholder="Inserta tu dirección aquí" required> <br><br>
+                
+
+                <label class="campo_texto"> Calle: </label>
+                <input type="name" class="campo" placeholder="Inserta tu dirección aquí"> <br><br>
+
+                <label class="campo_texto"> Número de Casa: </label>
+                <input type="name" class="campo" placeholder="Inserta tu dirección aquí"> <br><br>
+
+                <label class="campo_texto"> Información Adicional </label>
+                <input type="text" id="texto_campo" size="50" class="campo" placeholder="Ej: Casa con verjas chocolates"> <br><br>
+
+                <input type="button" onclick="actualizar_info();" class="boton" value="Actualizar"> </input> 
+            </form> 
+        </div>
+
+        <div id="factura_main">
+            <h1 class="factura_titulo">FACTURA DE COMPRA</h1>
+
+            <div id="factura_contenido">
+                <p class="formulario_titulo2">Tu Resumen de Compra</p>
+
+                <p> Introduce la cantidad de elementos a comprar:</p>
+
+                <label class="campo_texto"> Jarabe Vicks 44 130g</label>
+                <label class="precio_boton">(B/16.34)</label>
+                <input type="number" id="p1" min="0" max="10" value="0" class="campo_cantidad"> <br><br>
+
+                <label class="campo_texto"> Aleve Liquid-Gels 160u/d</label>
+                <label class="precio_boton">(B/12.78)</label>
+                <input type="number" id="p2" min="0" max="10" value="0"  class="campo_cantidad"> <br><br>
+                
+                <label class="campo_texto"> Tylenol Extra Strength 225u/d</label>
+                <label class="precio_boton">(B/10.47)</label>
+                <input type="number" id="p3" min="0" max="10" value="0" class="campo_cantidad"> <br><br>
+                
+                <input type="button" onclick="actualizar_factura()" class="boton_factura" value="Actualizar Datos"> </input>
+
+                <hr>
+
+                <p> Realizada del dia: <b><script>fecha()</script></b></p>
+                <p> A nombre de: <span id="nombre_completo"><b></b></span> </p>
+                <div class="factura_resumen">
+                    <label class="numero" id="cant_p1"><b>0</b></label> <label class="resumen_productos"> x Jarabe Vicks 44 130g 
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label> 
+                    <label class="resumen_precio" id="total_precio1"> B/00.00</label><br>
+                    
+                    <label class="numero" id="cant_p2"><b>0</b></label> <label class="resumen_productos"> x Aleve Liqui-Gels 160u/d 
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label> 
+                    <label class="resumen_precio" id="total_precio2"> B/00.00</label><br>
+
+                    <label class="numero" id="cant_p3"><b>0</b></label> <label class="resumen_productos"> x Tylenol Extra Strength 225tabletas
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label>
+                    <label class="resumen_precio" id="total_precio3"> B/00.00</label><br>
+                    
+                    <label class="resumen_productos"> <b>Subtotal </b>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label>
+                    <label class="resumen_precio" id="subtotal"> B/00.00</label><br>
+
+                    <label class="resumen_productos"> <b>Descuento Jubilado </b>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label>
+                    <label class="resumen_precio" id="jubilado"> B/00.00</label><br>
+
+                    <label class="resumen_productos"> <b>Impuesto ITBMS </b>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label>
+                    <label class="resumen_precio" id="impuesto"> B/00.00</label><br>
+                    <hr>
+                    
+                    <label class="resumen_productos"> <b>Total </b>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </label>
+                    <label class="resumen_precio" id="total"> B/00.00</label><br><br>
+                    
+                    <input type="button" onclick="comprar()" class="boton_compra" value="Realizar Compra"> </input>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <section>
+            <a href="https://twitter.com/medi_sup_507" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/medi.sup.507/" target="_blank">Instagram</a>
+            <a href="https://maps.app.goo.gl/P8S98HLCivuVtwUv6" target="_blank" >Ubicación</a> 
+        </section>
+        <p>Copyright 2021</p>
+    </footer>
+</body>
+</html>
